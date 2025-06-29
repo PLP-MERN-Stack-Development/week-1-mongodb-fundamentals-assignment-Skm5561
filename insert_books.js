@@ -183,16 +183,316 @@ insertBooks().catch(console.error);
  *
  * 1. Find all books:
  *    db.books.find()
+ * [
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "published_year": 1988,
+    "price": 10.99,
+    "in_stock": true,
+    "pages": 208,
+    "publisher": "HarperCollins"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "published_year": 1949,
+    "price": 12.99,
+    "in_stock": true,
+    "pages": 328,
+    "publisher": "Secker & Warburg"
+  },
+  {
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "genre": "Biography",
+    "published_year": 2018,
+    "price": 18.5,
+    "in_stock": false,
+    "pages": 426,
+    "publisher": "Crown"
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "published_year": 2008,
+    "price": 32.99,
+    "in_stock": true,
+    "pages": 464,
+    "publisher": "Prentice Hall"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "published_year": 1960,
+    "price": 7.99,
+    "in_stock": true,
+    "pages": 281,
+    "publisher": "J.B. Lippincott & Co."
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "genre": "Programming",
+    "published_year": 1999,
+    "price": 29.99,
+    "in_stock": true,
+    "pages": 352,
+    "publisher": "Addison-Wesley"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "genre": "History",
+    "published_year": 2011,
+    "price": 21.5,
+    "in_stock": true,
+    "pages": 443,
+    "publisher": "Harper"
+  },
+  {
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Thriller",
+    "published_year": 2019,
+    "price": 15.0,
+    "in_stock": false,
+    "pages": 336,
+    "publisher": "Celadon Books"
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "genre": "Memoir",
+    "published_year": 2018,
+    "price": 13.5,
+    "in_stock": true,
+    "pages": 334,
+    "publisher": "Random House"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "published_year": 1932,
+    "price": 9.99,
+    "in_stock": true,
+    "pages": 268,
+    "publisher": "Chatto & Windus"
+  }
+]
+[
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "published_year": 1988,
+    "price": 10.99,
+    "in_stock": true,
+    "pages": 208,
+    "publisher": "HarperCollins"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "published_year": 1949,
+    "price": 12.99,
+    "in_stock": true,
+    "pages": 328,
+    "publisher": "Secker & Warburg"
+  },
+  {
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "genre": "Biography",
+    "published_year": 2018,
+    "price": 18.5,
+    "in_stock": false,
+    "pages": 426,
+    "publisher": "Crown"
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "published_year": 2008,
+    "price": 32.99,
+    "in_stock": true,
+    "pages": 464,
+    "publisher": "Prentice Hall"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "published_year": 1960,
+    "price": 7.99,
+    "in_stock": true,
+    "pages": 281,
+    "publisher": "J.B. Lippincott & Co."
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "genre": "Programming",
+    "published_year": 1999,
+    "price": 29.99,
+    "in_stock": true,
+    "pages": 352,
+    "publisher": "Addison-Wesley"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "genre": "History",
+    "published_year": 2011,
+    "price": 21.5,
+    "in_stock": true,
+    "pages": 443,
+    "publisher": "Harper"
+  },
+  {
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Thriller",
+    "published_year": 2019,
+    "price": 15.0,
+    "in_stock": false,
+    "pages": 336,
+    "publisher": "Celadon Books"
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "genre": "Memoir",
+    "published_year": 2018,
+    "price": 13.5,
+    "in_stock": true,
+    "pages": 334,
+    "publisher": "Random House"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "published_year": 1932,
+    "price": 9.99,
+    "in_stock": true,
+    "pages": 268,
+    "publisher": "Chatto & Windus"
+  }
+]
+
+
+
+
+
+
+
+
+
+
  *
  * 2. Find books by a specific author:
  *    db.books.find({ author: "George Orwell" })
+ * 
+{ "genre": "Fiction" }
+
+{ "published_year": { "$gt": 2000 } }
+
+{ "author": "George Orwell" }
+
+
+db.books.updateOne(
+  { title: "1984" },
+  { $set: { price: 14.99 } }
+)
+
+db.books.deleteOne({ title: "The Alchemist" })
+
+
+
+
+
+
+
+
+
  *
  * 3. Find books published after 1950:
  *    db.books.find({ published_year: { $gt: 1950 } })
+ * 
+ * { "in_stock": true, "published_year": { "$gt": 2010 } }
+
+{ "title": 1, "author": 1, "price": 1, "_id": 0 }
+
+{ "price": 1 }
+
+{ "price": -1 }
+
+ * 
+ * 
  *
  * 4. Find books in a specific genre:
  *    db.books.find({ genre: "Fiction" })
+ * 
+ * [
+  { "$group": {
+      "_id": "$genre",
+      "averagePrice": { "$avg": "$price" }
+  }}
+]
+
+[
+  { "$group": {
+      "_id": "$author",
+      "count": { "$sum": 1 }
+  }},
+  { "$sort": { "count": -1 }},
+  { "$limit": 1 }
+]
+
+ * 
+ * [
+  { "$project": {
+      "decade": {
+        "$subtract": [ "$published_year", { "$mod": [ "$published_year", 10 ] }]
+      }
+  }},
+  { "$group": {
+      "_id": "$decade",
+      "count": { "$sum": 1 }
+  }},
+  { "$sort": { "_id": 1 }}
+]
+
+ * 
+ * 
+ * 
+ * 
+ * 
  *
  * 5. Find in-stock books:
  *    db.books.find({ in_stock: true })
+ * 
+ * 
+ * db.books.find({ title: "1984" }).explain("executionStats")
+
+
+db.books.find({ author: "George Orwell", published_year: 1949 }).explain("executionStats")
+
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  */ 
